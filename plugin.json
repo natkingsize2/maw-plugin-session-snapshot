@@ -1,0 +1,22 @@
+{
+  "name": "session-snapshot",
+  "version": "1.0.0",
+  "description": "One-command save of brain state · combines hot-write + log-session + Oracle jod",
+  "type": "maw-plugin",
+  "sdk": "^1.0.0",
+  "entry": "src/index.ts",
+  "cli": {
+    "command": "snapshot",
+    "aliases": ["ss"],
+    "help": "maw snapshot --milestone <text> | --close | --rrr",
+    "flags": {
+      "milestone": "string",
+      "close": "boolean",
+      "rrr": "boolean",
+      "quiet": "boolean"
+    }
+  },
+  "dependencies": [],
+  "engine": "bun",
+  "license": "MIT"
+}
