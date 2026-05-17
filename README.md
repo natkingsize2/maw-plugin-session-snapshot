@@ -2,6 +2,19 @@
 
 One-command save of brain state. Combines **hot-write** (brain memory), **log-session** (session log), and **Oracle jod** (searchable entry) into a single `maw snapshot` command.
 
+## Why
+
+A brain session that ends without writing all three of `hot-write`, `log-session`,
+and Oracle `jod` leaves the *next* session amnesic — `hot-read brain` returns
+stale state and ~10 minutes are lost reconstructing context from `git log` and
+`tmux ls`. Under 70%-context pressure, hand-typing three heredocs invites
+skipped writes. `maw snapshot` collapses the ritual into one command with
+auto-detected git, tmux, and Oracle context, with file fallbacks so the writes
+never silently fail.
+
+See [USE-CASES.md](./USE-CASES.md) for concrete workflows, a real session
+transcript, and when *not* to use this plugin.
+
 ## Usage
 
 ```bash
